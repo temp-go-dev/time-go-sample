@@ -1,5 +1,5 @@
 package property
 
-var (
-	App_common_time_set_now = ""
-)
+type Propertys struct {
+	App_common_time_set_now string
+}

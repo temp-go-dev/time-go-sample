@@ -7,14 +7,17 @@ import (
 	pro "github.com/temp-go-dev/time-go-sample/property"
 )
 
-var now time.Time
+var (
+	now  time.Time
+	prop pro.Propertys
+)
 
 func GetNow() time.Time {
 
 	timelayout := Timeformat("yyyy-MM-dd HH:mm:ss MST")
 
 	if now.IsZero() {
-		propertySetNow := pro.App_common_time_set_now
+		propertySetNow := prop.App_common_time_set_now
 		if propertySetNow == "" {
 			// 現在時刻
 			now = time.Now()
